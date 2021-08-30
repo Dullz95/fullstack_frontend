@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>landing</title>
+</head>
+<body>
+    
+    <!-- login -->
+    <div class="login-form">
+        <form onsubmit="login(); event.preventDefault()" id="formlog">
+            <div>
+                <label for="email">Email:</label>
+                <input
+                    type="text"
+                    id="emaillog"
+                    name="email"
+                    placeholder="eg. abcd@gmail.com"
+                    required
+                />
+                <label for="password">Password:</label>
+                <input type="password" id="passwordlog" name="password" required />
+                <button type="submit">Log In</button>
+            </div>
+           
+        </form>
+        
+   
+        <a href="./registration.html">Need an account? register.</a>
+    </div>
+    <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./registration.html">Register</a>
+        <a href="#">contact</a>
+        <a href="#">About</a>
+    </div>
+    <a href="./index.html" class="mainh"><h1>ELECTRONICS R US</h1></a>
+    
+
+    <div class="sale">
+        <img src="./images/newsale.png" alt="">
+    </div> 
+    <div class="brands">
+        <img src="./images/apple.png" alt="">
+        <img src="./images/Asus.png" alt="">
+        <img src="./images/dell.png" alt="">
+        <img src="./images/microsoft.png" alt="">
+        <img src="./images/playstation.png" alt="">
+        <img src="./images/samsung.png" alt="">
+    </div> 
+    <div class="footer">
+        <p>Online electrontronic Co.</p>
+        <p>Established in 2021</p>
+        
+    </div>
+  
+ <script src="./login.js"></script>   
+</body>
+</html>

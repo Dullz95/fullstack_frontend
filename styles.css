@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+
+  .topnav {
+    background-color:lightskyblue;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  .mainh{
+      font-size: 20px;
+      text-decoration: none;
+      color: black;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: white;
+    color: black;
+  }
+.login-form{
+    display: flex;
+    justify-content: flex-end;
+    background-color:lightskyblue;
+   
+}  
+
+.login-form a {
+    text-decoration: none;
+    color: black;
+}
+
+.register-container{
+    width: 50%;
+    /* border: 2px solid black; */
+    /* text-align: center; */
+}  
+#formreg{
+    font-size: 25px;
+}
+
+#formreg input{
+margin-left: 10%;
+margin-top: 5%;
+}
+
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* padding: 10px 10%;  */
+    margin-top: 2%;
+    /* flex: 1 1 150px; /* stretch: */
+    /* flex: 0 1 150px; no stretch: */ 
+    font-size: 14px;
+    border-radius: 10px;
+    /* margin-left: 150px; */
+    margin-right: 200px;
+  }
+
+.products img{
+    height: 20vh;
+    object-fit: cover;
+}
+.myprod {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    /* padding: 10px 10%;  */
+    margin-top: 2%;
+    flex: 1 1 150px; /* stretch: */
+     flex: 0 1 150px; 
+    font-size: 14px;
+    border-radius: 10px;
+    /* margin-left: 150px; */
+    margin-right: 200px;
+  }
+
+.myprod img{
+    height: 20vh;
+    object-fit: cover;
+}
+
+/* landing page image styling */
+.sale img{
+    height: 40vh;
+    
+    object-fit:cover;
+    margin-top: 2%;
+    margin-left: 35%;
+    
+}
+.sale{
+    height: 100%;
+    
+}
+.brands{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 10%;
+}
+.brands img{
+    width: 13%;
+}
+
+.footer{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 7%;
+    margin-right: 1%;
+}
+/* form styling */
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25%;
+    margin-left: 5%;
+    /* height: 100vh; */
+  }
+
+/* myprod page */
+.myprod-container{
+    /* display: flex; */
+}
+
+.conimage{
+    display: none;
+}
