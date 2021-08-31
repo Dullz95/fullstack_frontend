@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./modal.css">
     <title>Document</title>
 </head>
 <body>
@@ -12,6 +13,7 @@
         <a href="./index.html">Home</a>
         <a href="./products.html">Shop</a>
         <a href="./myprod.html">My products</a>
+        <a href="./profile.html">My profile</a>
         <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
     </div>
     <div class="myprod-container">
@@ -28,9 +30,28 @@
               </button>
         </form>
     </div>
+     <button class="trigger" id="modal-none">Click here to trigger the modal!</button> 
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <form method="PUT" id="modal-form">
+                <div>
+                    <input type="text" name="description" required placeholder="Enter product description" id="updating_description">
+                  <input type="text" name="product_name" required placeholder="Enter product name" id="updating_product_name">
+                  <input type="text" name="product_type" required placeholder="Enter product type" id="updating_product_type">
+                  <input type="text" name="price" required placeholder="Enter product price" id="updating_price">
+                  <input type="file" name="product_image" required placeholder="insert image" id="updating_product_image" class="product_img" onchange="convert(2)">
+                  <button onclick="event.preventDefault(), updatingProduct()" class="button-modal">
+                    Add Product
+                  </button>
+            </form>
+            
+        </div>
+    </div>
     <img class="conimage" src="" alt="">
     
 
     <script src="./myprod.js"></script>
+    <script src="./modal.js"></script>
 </body>
 </html>
