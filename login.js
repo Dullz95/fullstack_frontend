@@ -52,5 +52,11 @@ function registration() {
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
+            if (data.status_code == 201) {
+                window.location.href="./index.html";
+                alert("successfully register, please log in to continue")
+            } else {
+                alert("Something went wrong, please try again");
+            }
         });
-}
+};
