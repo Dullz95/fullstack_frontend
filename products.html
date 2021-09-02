@@ -16,7 +16,12 @@
         <a href="./cart.html">View cart</a>
         <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
       </div>
+    <input type="text" id="search" placeholder="search..">
    <div class="products"></div>
+   <div class="all-buttons">
+       <button onclick="filter('gaming-console')">Gaming consoles</button>
+       <button onclick="filter('mobile-phone')">mobile-phones</button>
+   </div>
    <script src="./products.js"></script>
 </body>
 </html>

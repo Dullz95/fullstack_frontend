@@ -13,7 +13,7 @@ function getData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".products"
-        ).innerHTML += `<div  id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}'</span><br><button class="add-to-cart" id=${product[0]}>Add to cart</button></div></div>`;
+        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}<br>Type: ${product[6]}</span><br><button class="add-to-cart" id=${product[0]}>Add to cart</button></div></div>`;
         
       });
       document.querySelectorAll(".add-to-cart").forEach(button => button.addEventListener("click", addToCart))
@@ -64,3 +64,39 @@ if (storage["cart"]){
         
       });
   }
+
+  // function to filter products
+function filter(category){
+let productCard = document.querySelectorAll(".all");
+for( let i = 0; i < productCard.length; i++){
+  productCard[i].style.display = "none"
+}
+
+let selectedProduct = document.querySelectorAll(`[category=${category}]`)
+for(let i = 0; i < selectedProduct.length; i++){
+  selectedProduct[i].style.display = "block"
+}
+}
+
+// Search function
+let searchProducts = []
+fetch('https://backendfs.herokuapp.com/product-table/')
+.then((res) => res.json())
+.then(data => {
+    let products = data.data
+    let searchBar = document.getElementById("search")
+    searchBar.addEventListener("keyup", (s) => {
+        const searchText = s.target.value.toLowerCase()
+        searchProducts = products.filter((product) => {
+            return (
+                product[2].toLowerCase().includes(searchText) || product[6].toLowerCase().includes(searchText)
+             )
+        })
+        let container = document.querySelector('.products')
+        container.innerHTML = ''
+        searchProducts.forEach((product) => {
+          container.innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}<br>Type: ${product[6]}</span><br><button class="add-to-cart" id=${product[0]}>Add to cart</button></div></div>`;
+          
+        })       
+    })
+})
