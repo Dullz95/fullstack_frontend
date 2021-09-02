@@ -4,3 +4,21 @@
     box-sizing: border-box;
     font-family: sans-serif;
   }
+
+  .profile-view{
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 8%;
+  }
+
+  .profile-view div{
+    margin-top: 2%;
+    font-size: 25px;
+    border: 1px solid black;
+  }
+
+  .profile-view button{
+    margin-top: 3%;
+    margin-right: 5%;
+    padding: 10px;
+  }

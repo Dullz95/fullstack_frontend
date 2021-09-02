@@ -14,7 +14,7 @@ function getData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".myprod"
-        ).innerHTML += `<div id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product.price}' alt='product'></img><br><div class="bottom"><br>ID: ${product.prod_id}<br>Sold by: ${product.email}<br>Name: ${product.product_name}<br>Price: ${product.image}<br>Description: ${product.description}'</span><br><button class='update-item trigger'>update</button><button class='delete-item' id='${product.prod_id}'>delete</button></div></div>`;
+        ).innerHTML += `<div id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product.price}' alt='product'></img><br><div class="bottom"><br>ID: ${product.prod_id}<br>Sold by: ${product.email}<br>Name: ${product.product_name}<br>Price: ${product.image}<br>Description: ${product.description}'</span><br><button class='update-item trigger' id='${product.prod_id}'>update</button><button class='delete-item' id='${product.prod_id}'>delete</button></div></div>`;
         document.querySelectorAll('.delete-item').forEach(button => button.addEventListener('click', deleteProduct));
         document.querySelectorAll('.trigger').forEach(button => button.addEventListener('click', toggleModalUpdate))
       });
@@ -91,6 +91,7 @@ function addingProduct() {
 function updatingProduct() {
   
   let productId = document.querySelector('.button-modal').id
+  console.log(productId)
   
     
   fetch(`https://backendfs.herokuapp.com/updating-products/${productId}`, {

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./profile.css">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./modal.css">
     <title>Document</title>
 </head>
 <body>
@@ -16,7 +17,27 @@
         <a href="./profile.html">My profile</a>
         <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
     </div>
+    <h1>Your profile</h1>
     <div class="profile"></div>
+    <button class="trigger" id="modal-none">Click here to trigger the modal!</button> 
+    <div class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <form method="PUT" id="modal-form">
+                <div>
+                    <input type="text" name="name" required placeholder="Enter name" id="up_name">
+                  <input type="text" name="last_name" required placeholder="Enter last name" id="up_last_name">
+                  <input type="text" name="username" required placeholder="Enter username" id="up_username">
+                  <input type="text" name="physical_address" required placeholder="Enter physical address" id="up_physical_address">
+                  <input type="text" name="password" required placeholder="Enter password" id="up_password">
+                  <button onclick="event.preventDefault(), updatingUser()" class="button-modal">
+                    Update User
+                  </button>
+            </form>
+            
+        </div>
+    </div>
     <script src="./profile.js"></script>
+    <script src="./modal.js"></script>
 </body>
-</html>+
+</html>
