@@ -78,6 +78,11 @@ for(let i = 0; i < selectedProduct.length; i++){
 }
 }
 
+function allProducts(){
+  let productCard = document.querySelectorAll(".all");
+  productCard[i].style.display = "block"
+}
+
 // Search function
 let searchProducts = []
 fetch('https://backendfs.herokuapp.com/product-table/')

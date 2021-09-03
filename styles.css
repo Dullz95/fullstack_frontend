@@ -9,7 +9,32 @@
     background-color:lightskyblue;
     overflow: hidden;
   }
+
+  .loghead{
+      margin-left: 12.5%;
+      margin-bottom: 1%;
+  }
+  .under-div{
+      display: flex;
+      flex-direction: row;
+      margin-left: 20%;
+      margin-top: 2%;
+      /* margin-bottom: 1%; */
+  }
+
+  .under-div input{
+      width: 50%;
+     margin-right: 5px; 
+  }
   
+  .under-div button{
+      padding: 10%;
+  }
+
+  .under-div h1{
+    margin-top: 1%;  
+    margin-right: 5%;
+  }
   /* Style the links inside the navigation bar */
   .topnav a {
     float: right;
@@ -56,6 +81,40 @@ margin-left: 10%;
 margin-top: 5%;
 }
 
+.all{
+   width: 18%;
+   border: 1px solid black;
+   border-radius: 10px;
+   text-align: left;
+   box-shadow: 10px black;
+   padding: 10px;
+   
+}
+
+.products-landing {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 10%; 
+    /* margin-top: 2%; */
+     flex: 1 1 150px; /* stretch: */
+     flex: 0 1 150px; 
+    font-size: 12px;
+    border-radius: 10px;
+ 
+    
+    
+
+  }
+
+  .products-landing img{
+    height: 15vh;
+    object-fit: cover;
+    width: 100%;
+}
+
 
 .products {
     display: flex;
@@ -71,6 +130,7 @@ margin-top: 5%;
     border-radius: 10px;
     /* margin-left: 150px; */
     margin-right: 200px;
+  
   }
 
 .products img{
@@ -120,7 +180,7 @@ margin-top: 5%;
     padding: 10px 10%;
 }
 .brands img{
-    width: 13%;
+    width: 8%;
 }
 
 .footer{
@@ -146,4 +206,10 @@ margin-top: 5%;
 
 .conimage{
     display: none;
+}
+
+.all-buttons{
+    display: flex;
+    flex-direction: row;
+    margin-left: 35%;
 }

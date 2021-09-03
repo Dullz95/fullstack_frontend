@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./slider.css">
     <title>landing</title>
 </head>
 <body>
@@ -36,27 +37,84 @@
         <a href="./registration.html">Register</a>
         <a href="#">contact</a>
         <a href="#">About</a>
+        <!-- <a href="./index.html" class="mainh"><h1>ELECTRONICS R US</h1></a> -->
     </div>
-    <a href="./index.html" class="mainh"><h1>ELECTRONICS R US</h1></a>
+    <div class="under-div">
+    <h1>Search</h1>
+    <input type="text" id="search" >
+    </div>
+    <div class="all-buttons">
+        <button onclick="filter('gaming-console')">Gaming consoles</button>
+        <button onclick="filter('mobile-phone')">mobile-phones</button>
+        <button onclick="filter('notebook')">Notebooks</button>
+        <button onclick="filter('mobile-phone')">gaming-computers</button>
+        <button onclick="filter('mobile-phone')">graphics-card</button> 
+        <button onclick="window.location.reload()">All</button>
+    </div>
     
-
-    <div class="sale">
+    <!-- <div class="sale">
         <img src="./images/newsale.png" alt="">
-    </div> 
-    <div class="brands">
-        <img src="./images/apple.png" alt="">
-        <img src="./images/Asus.png" alt="">
-        <img src="./images/dell.png" alt="">
-        <img src="./images/microsoft.png" alt="">
-        <img src="./images/playstation.png" alt="">
-        <img src="./images/samsung.png" alt="">
-    </div> 
-    <div class="footer">
-        <p>Online electrontronic Co.</p>
-        <p>Established in 2021</p>
-        
+    </div> -->
+     <div class="products-landing"></div><br>
+    <h1 class="loghead">Featured brands:</h1>
+     <!-- Slideshow container -->
+<div class="slideshow-container fade">
+
+    <!-- Full images with numbers and message Info -->
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="./images/apple.png" style="width:10%">
+      
     </div>
   
- <script src="./login.js"></script>   
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="./images/Asus.png" style="width:20%">
+ 
+    </div>
+  
+    <div class="Containers">
+      <div class="MessageInfo"></div>
+      <img src="./images/dell.png" style="width:10%">
+      
+    </div>
+    <div class="Containers">
+        <div class="MessageInfo"></div>
+        <img src="./images/microsoft.png" style="width:20%">
+       
+      </div>
+    
+      <div class="Containers">
+        <div class="MessageInfo"></div>
+        <img src="./images/playstation.png" style="width:20%">
+        
+      </div>
+    
+      <div class="Containers">
+        <div class="MessageInfo"></div>
+        <img src="./images/samsung.png" style="width:10%">
+      
+      </div>
+  
+    <!-- Back and forward buttons -->
+    <a class="Back" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="forward" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The circles/dots -->
+  <!-- <div style="text-align:center">
+    <span class="dots" onclick="currentSlide(1)"></span>
+    <span class="dots" onclick="currentSlide(2)"></span>
+    <span class="dots" onclick="currentSlide(3)"></span>
+    <span class="dots" onclick="currentSlide(4)"></span>
+    <span class="dots" onclick="currentSlide(5)"></span>
+    <span class="dots" onclick="currentSlide(6)"></span>
+  </div> -->
+  
+ <script src="./login.js"></script>  
+ <script src="./products.js"></script> 
+ <script src="./slider.js"></script>
+ <script src="https://kit.fontawesome.com/2d04bbe871.js" crossorigin="anonymous"></script>
 </body>
 </html>
