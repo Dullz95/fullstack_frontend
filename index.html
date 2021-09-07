@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="./slider.css">
+    <link rel="stylesheet" href="modal.css">
     <title>landing</title>
 </head>
 <body>
@@ -51,6 +52,13 @@
         <button onclick="filter('mobile-phone')">graphics-card</button> 
         <button onclick="window.location.reload()">All</button>
     </div>
+    <button class="trigger" id="modal-none">Click here to trigger the modal!</button>  
+    <div class="modal">
+      <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <div class="view-product"></div>   
+      </div>
+  </div>
     
     <!-- <div class="sale">
         <img src="./images/newsale.png" alt="">
@@ -115,6 +123,7 @@
  <script src="./login.js"></script>  
  <script src="./products.js"></script> 
  <script src="./slider.js"></script>
+ <script src="./modal.js"></script>
  <script src="https://kit.fontawesome.com/2d04bbe871.js" crossorigin="anonymous"></script>
 </body>
 </html>

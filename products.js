@@ -1,5 +1,6 @@
-// all products page
 const storage = window.localStorage
+
+// all products page
 
 let base_URL = "https://backendfs.herokuapp.com/product-table/";
 
@@ -24,16 +25,18 @@ getData(base_URL);
 
 
 
+
 // create cart
 
 let cart = [];
 if (storage["cart"]){
   cart = JSON.parse(storage.getItem("cart"))
 } 
+
   function addToCart(e){
    let product = {};
    let prody = e.target.id;
-   console.log(prody);
+  //  console.log(prody);
    fetch(`https://backendfs.herokuapp.com/view-product/${prody}`, {
         method: 'GET',
         headers: {
@@ -41,17 +44,18 @@ if (storage["cart"]){
       }}) 
       .then((res) => res.json())
       .then((data) => {
-        console.log(data)
-        product.name = data["data"][0][1]
-        product.price = data["data"][0][3]
+        // console.log(data)
+        product.name = data["data"][0][2]
+        product.price = data["data"][0][4]
         product.image = data["data"][0][5]
-        console.log(product.name)
-        console.log(product.price)
-        console.log(product.image)
+        product.id = data["data"][0][0]
+        // console.log(product.name)
+        // console.log(product.price)
+        // console.log(product.image)
 
         for (let item in cart){
-          console.log(item)
-          if (product.name == cart[item].name){
+          // console.log(item)
+          if (product.id == cart[item].id){
 
               alert('item already in cart')
               return
@@ -59,6 +63,11 @@ if (storage["cart"]){
         }
         cart = cart.concat(product)
         storage.setItem("cart", JSON.stringify(cart))
+        let totalPrice = cart.reduce((total, c) => total + parseInt(c.price), 0)
+        console.log(totalPrice);
+        
+        localStorage.setItem('price', JSON.stringify(totalPrice))
+        
         console.log(cart)
         alert("item added succesfully")
         
@@ -78,10 +87,10 @@ for(let i = 0; i < selectedProduct.length; i++){
 }
 }
 
-function allProducts(){
-  let productCard = document.querySelectorAll(".all");
-  productCard[i].style.display = "block"
-}
+// function allProducts(){
+//   let productCard = document.querySelectorAll(".all");
+//   productCard[i].style.display = "block"
+// }
 
 // Search function
 let searchProducts = []

@@ -75,13 +75,41 @@ function landingData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".products-landing"
-        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}<br>Type: ${product[6]}</span></div></div>`;
+        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}<br>Type: ${product[6]}</span><br><button class="trigger trigger-new" id='${product[0]}'>View product</button></div></div>`;
         
       });
+      document.querySelectorAll(".trigger-new").forEach(button => button.addEventListener("click", viewProductModal))
     });
 }
 
 landingData(base_URL);
+
+// view product modal
+
+function viewProductModal(e){
+    console.log("anything");
+    let prodyId = e.target.id;
+
+    console.log(prodyId);
+    fetch(`https://backendfs.herokuapp.com/view-product/${prodyId}`, {
+         method: 'GET',
+         headers: {
+         "Content-Type": "application/json",
+       }}) 
+       .then((res) => res.json())
+       .then((data) => {
+         console.log(data)
+         let product = data.data
+        
+      document.querySelector(".view-product").innerHTML = ``;
+      
+        document.querySelector(
+          ".view-product"
+        ).innerHTML += `<div id="item-${product[0]}" class="all-modal"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[5]}<br>Description: ${product[3]}'</span> </div></div>`;
+      document.querySelector('.modal').classList.toggle('show-modal');
+    });
+       ;
+   }
 
 
 // Search function
