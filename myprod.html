@@ -10,26 +10,29 @@
 </head>
 <body>
     <div class="topnav">
-        <a href="./index.html">Home</a>
-        <a href="./products.html">Shop</a>
-        <a href="./myprod.html">My products</a>
-        <a href="./profile.html">My profile</a>
-        <a href="./cart.html">View cart</a>
         <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
+        <a href="#">About Us</a>
+        <a href="./contact.html">Contact us</a>
+        <a href="./cart.html">View cart</a>
+        <a href="./profile.html">My profile</a>
+        <a href="./myprod.html">My products</a>
+        <a href="./products.html">Home</a>
     </div>
+
+    <div class="under-div">
+        <h1>Search</h1>
+        <input type="text" id="search" >
+        </div>
+        <div class="all-buttons">
+            <button onclick="filter('gaming-console')">Gaming consoles</button>
+            <button onclick="filter('mobile-phone')">mobile-phones</button>
+            <button onclick="filter('notebook')">Notebooks</button>
+            <button onclick="filter('gaming-computer')">gaming-computers</button>
+            <button onclick="filter('mobile-phone')">graphics-card</button> 
+            <button onclick="window.location.reload()">All</button>
+        </div>
     <div class="myprod-container">
         <div class="myprod"></div>
-        <form method="POST" id="form">
-            <div class="section">
-                <input type="text" name="description" required placeholder="Enter product description" id="add_description">
-              <input type="text" name="product_name" required placeholder="Enter product name" id="add_product_name">
-              <input type="text" name="product_type" required placeholder="Enter product type" id="add_product_type">
-              <input type="text" name="price" required placeholder="Enter product price" id="add_price">
-              <input type="file" name="product_image" required placeholder="insert image" id="add_product_image" class="product_img" onchange="convert(1)">
-              <button onclick="event.preventDefault(), addingProduct()" class="button-modal">
-                Add Product
-              </button>
-        </form>
     </div>
      <button class="trigger" id="modal-none">Click here to trigger the modal!</button> 
     <div class="modal">
@@ -51,8 +54,18 @@
         </div>
     </div>
     <img class="conimage" src="" alt="">
+
+    <br>
+    <div class="footer-new">
+      <i class="fab fa-cc-paypal"></i>
+      <i class="fab fa-cc-visa"></i>
+      <i class="fab fa-cc-mastercard"></i>
+      
+    </div>
     
 
+    <script src="https://kit.fontawesome.com/2d04bbe871.js" crossorigin="anonymous"></script>
+    <script src="./products.js"></script>
     <script src="./myprod.js"></script>
     <script src="./modal.js"></script>
 </body>

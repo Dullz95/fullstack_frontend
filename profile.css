@@ -8,13 +8,19 @@
   .profile-view{
     width: 30%;
     margin-left: 35%;
-    margin-top: 8%;
+    margin-top: 4%;
+    border: 2px solid lightskyblue;
+    background-color: lightskyblue;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
   }
 
   .profile-view div{
     margin-top: 2%;
     font-size: 25px;
-    border: 1px solid black;
+    
   }
 
   .profile-view button{
@@ -22,3 +28,8 @@
     margin-right: 5%;
     padding: 10px;
   }
+
+  .profile-one{
+    text-align: center;
+  }
+  

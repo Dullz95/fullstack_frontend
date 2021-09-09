@@ -6,7 +6,7 @@
   position: relative;
   margin: auto;
   /* background-color: lightskyblue; */
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 /* Make the images invisible by default */
@@ -15,7 +15,7 @@
 }
 
 .Containers img{
- margin-left: 40%;
+ margin-left: 43%;
 }
 
 /* forward & Back buttons */

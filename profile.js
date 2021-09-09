@@ -10,7 +10,7 @@ function data(url) {
       document.querySelector(".profile").innerHTML = ``;
         document.querySelector(
           ".profile"
-        ).innerHTML += `<div class ="profile-view"><br><div>Email: ${profile.email}</div><br><div>Last Name: ${profile.name}</div><br><div>Name: ${profile.last_name}</div><br><div>Password: ${profile.password}</div><br><div>Physical Address: ${profile.physical_address}</div><br><div>User ID: ${profile.user_id}</div><br><div>Username${profile.username}</div></span><br><button class="trigger" onclick='toggleModal()'>Update</button><button class="delete-user">Delete Profile</button></div>`;
+        ).innerHTML += `<div class ="profile-view"><br><div>Email: ${profile.email}</div><br><div>Last Name: ${profile.name}</div><br><div>Name: ${profile.last_name}</div><br><div>Password: ${profile.password}</div><br><div>Physical Address: ${profile.physical_address}</div><br><div>User ID: ${profile.user_id}</div><br><div>Username: ${profile.username}</div></span><br><button class="trigger" onclick='toggleModal()'>Update</button><button class="delete-user">Delete Profile</button></div>`;
         document.querySelectorAll('.delete-user').forEach(button => button.addEventListener('click', deleteUser));
     });
 }

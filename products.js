@@ -14,7 +14,7 @@ function getData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".products"
-        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}<br>Type: ${product[6]}</span><br><button class="add-to-cart" id=${product[0]}>Add to cart</button></div></div>`;
+        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>Product ID: ${product[0]}<br><br>Sold by: ${product[1]}<br><br>Name: ${product[2]}<br><br>Price: ${product[4]}<br><br>Description: ${product[3]}<br><br>Type: ${product[6]}</span><br><br><button class="add-to-cart" id=${product[0]}>Add to cart</button></div></div>`;
         
       });
       document.querySelectorAll(".add-to-cart").forEach(button => button.addEventListener("click", addToCart))
@@ -114,3 +114,4 @@ fetch('https://backendfs.herokuapp.com/product-table/')
         })       
     })
 })
+

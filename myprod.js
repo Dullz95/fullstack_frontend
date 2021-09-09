@@ -14,7 +14,7 @@ function getData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".myprod"
-        ).innerHTML += `<div id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product.price}' alt='product'></img><br><div class="bottom"><br>ID: ${product.prod_id}<br>Sold by: ${product.email}<br>Name: ${product.product_name}<br>Price: ${product.image}<br>Description: ${product.description}'</span><br><button class='update-item trigger' id='${product.prod_id}'>update</button><button class='delete-item' id='${product.prod_id}'>delete</button></div></div>`;
+        ).innerHTML += `<div category=${product.type} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product.price}' alt='product'></img><br><div class="bottom"><br>ID: ${product.prod_id}<br>Sold by: ${product.email}<br>Name: ${product.product_name}<br>Price: ${product.image}<br>Description: ${product.description}'</span><br><button class='update-item trigger' id='${product.prod_id}'>update</button><button class='delete-item' id='${product.prod_id}'>delete</button></div></div>`;
         document.querySelectorAll('.delete-item').forEach(button => button.addEventListener('click', deleteProduct));
         document.querySelectorAll('.trigger').forEach(button => button.addEventListener('click', toggleModalUpdate))
       });
@@ -59,6 +59,7 @@ function addingProduct() {
       .then(res => res.json())
       .then(res => {
         window.location.reload();
+        alert("product added succesfully")
         console.log(res);
       });
   }
@@ -131,3 +132,27 @@ function deleteProduct(e){
       console.log(res);
     });
 }
+
+// search for my prod
+
+let searchNewProducts = []
+fetch('https://backendfs.herokuapp.com/product-table/')
+.then((res) => res.json())
+.then(data => {
+    let products = data.data
+    let searchBar = document.getElementById("search")
+    searchBar.addEventListener("keyup", (s) => {
+        const searchText = s.target.value.toLowerCase()
+        searchProducts = products.filter((product) => {
+            return (
+                product[2].toLowerCase().includes(searchText) || product[6].toLowerCase().includes(searchText)
+             )
+        })
+        let container = document.querySelector('.myprod')
+        container.innerHTML = ''
+        searchProducts.forEach((product) => {
+          container.innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0]}<br>Sold by: ${product[1]}<br>Name: ${product[2]}<br>Price: ${product[4]}<br>Description: ${product[3]}<br>Type: ${product[6]}</span><br><button class="add-to-cart" id=${product[0]}>Add to cart</button></div></div>`;
+          
+        })       
+    })
+})

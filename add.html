@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./add.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav">
+        <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
+        <a href="#">About Us</a>
+        <a href="./contact.html">Contact us</a>
+        <a href="./cart.html">View cart</a>
+        <a href="./profile.html">My profile</a>
+        <a href="./myprod.html">My products</a>
+        <a href="./products.html">Home</a>
+    </div>
+    <div class="add-product-page">
+        <h1>Add a product</h1>
+        <form method="POST" id="form" class="adding-product">
+            <div class="section-new">
+                <input type="text" name="description" required placeholder="Enter product description" id="add_description">
+              <input type="text" name="product_name" required placeholder="Enter product name" id="add_product_name">
+              <input type="text" name="product_type" required placeholder="Enter product type" id="add_product_type">
+              <input type="text" name="price" required placeholder="Enter product price" id="add_price">
+              <input type="file" name="product_image"  id="add_product_image" class="product_img" onchange="convert(1)">
+              <button onclick="event.preventDefault(), addingProduct()" class="button-modal">
+                Add Product
+              </button>
+            </div>
+        </form> 
+    </div>
+    <img class="conimage" src="" alt="">
+    <script src="./myprod.js"></script>
+    <script src="./products.js"></script>
+</body>
+</html>

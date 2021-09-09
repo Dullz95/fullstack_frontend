@@ -10,24 +10,30 @@
     
     <title>Cart</title>
 </head>
-<body>
-    <div class="topnav">
-        <a href="./profile.html">View Profile</a>
-        <a href="./cart.html">View Cart</a>
-        <a href="./products.html">Shop</a>
-        <a href="./products.html">Products</a>
-        <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
-      </div>
+
+<div class="topnav">
+    <a onclick="event.preventDefault, signOut()" href="./index.html">Sign out</a>
+    <a href="#">About Us</a>
+    <a href="./contact.html">Contact us</a>
+    <a href="./cart.html">View cart</a>
+    <a href="./profile.html">My profile</a>
+    <a href="./myprod.html">My products</a>
+    <a href="./products.html">Home</a>
+</div>
       <h1 class="mainh">Your cart</h1>
     <div class="cart-container">
         <div class="cart-items"></div>
-        <div class="cart-total"></div>
+       
         
     </div>
   
-    <div class="cart-bottom"> Cart Total
-    <span class="cart-total"></span></div>
+    <div class="cart-bottom"> 
+    <span class="cart-total"></span>
     <button onclick="clearCart()" class="clearc">Clear Cart</button>
+    <button class="trigger-new" onclick="toggleModal()">Proceed to checkout</button>
+    </div>
+    
+    
     <button class="trigger" id="modal-none">Click here to trigger the modal!</button>  
     <div class="modal">
       <div class="modal-content">
@@ -47,17 +53,30 @@
                 <input type="text" placeholder="Enter Branch Code">
             </div>
             <div>
+                <!-- <label for="name">Branch Code</label> -->
+                <input type="text" placeholder="Enter Address">
+            </div>
+            <div>
                 <!-- <label for="email">Email</label> -->
                 <input type="text" placeholder="Enter Email address">
             </div>
-            <button>Submit</button>
+            <button onclick="event.preventDefault(); checkout()">Submit</button>
               <div></div>
           </form>
       </div>
    </div>
-    <button class="trigger" onclick="toggleModal()">Proceed to checkout</button>
+
+   
+    
+    <div class="footer-new-cart">
+        <i class="fab fa-cc-paypal"></i>
+        <i class="fab fa-cc-visa"></i>
+        <i class="fab fa-cc-mastercard"></i>
+        
+    </div>
     <script src="./products.js"></script>
     <script src="./cart.js"></script>
     <script src="./modal.js"></script>
+    <script src="https://kit.fontawesome.com/2d04bbe871.js" crossorigin="anonymous"></script>
 </body>
 </html>
