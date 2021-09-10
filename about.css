@@ -48,6 +48,7 @@
         background-color: lightskyblue;
         height: 31vh;
         margin-bottom: 10%; 
+        padding: 10px;
     }
     .page-row div{
         width: 20%;
