@@ -99,18 +99,11 @@
     /* left: -8%; */
     margin-bottom: 30px;
     padding: 10px;
+    
 }
-   
-    } 
-
-    .trigger-new-one{
-      display: flex;
-    }
-  .mainh{
-    /* margin-top: 18%; */
-    /* text-align: center; */
-    /* margin-left: 32%; */
+ .cart-total{
+   font-size: 26px;
+ }  
 }
-  
 
   
