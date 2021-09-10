@@ -153,7 +153,6 @@ function filter(category){
     function signOut(){
       prompt("are you sure you'd like to sign out?")
       window.location.href="./index"
-
     }
 
    

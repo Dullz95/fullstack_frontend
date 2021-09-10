@@ -59,10 +59,9 @@ function addingProduct() {
       .then(res => res.json())
       .then(res => {
         if(typeof(price) != 'number'){
-          alert("price must be integer values only")
-
-         
+          alert("price must be integer values only")  
         }
+  
         else{
           window.location.reload();
           alert("product added succesfully")

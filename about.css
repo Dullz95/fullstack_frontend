@@ -44,7 +44,7 @@
         display: flex;
         flex-wrap: wrap;
         flex-direction: column;
-        margin-top: 10%;
+        margin-top: -5%;
         background-color: lightskyblue;
         height: 45vh;
         margin-bottom: 10%; 
@@ -72,7 +72,7 @@
     }
 
     .about-store{
-        margin-top: 12%;
+        margin-top: 16%;
         margin-left: 35%;
     }
 }
