@@ -46,7 +46,7 @@
         flex-direction: column;
         margin-top: -5%;
         background-color: lightskyblue;
-        height: 45vh;
+        height: 31vh;
         margin-bottom: 10%; 
     }
     .page-row div{
@@ -62,9 +62,13 @@
 
     .page-row i {
         /* margin-left: 45%; */
-        font-size: 20px;
+        font-size: 16px;
         color: white;
         margin-top: 10%;
+    }
+
+    .page-row p{
+        font-size: 11px;
     }
 
     .about-top p{
@@ -72,7 +76,7 @@
     }
 
     .about-store{
-        margin-top: 16%;
+        margin-top: 20%;
         margin-left: 35%;
     }
 }

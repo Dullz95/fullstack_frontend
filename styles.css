@@ -129,7 +129,7 @@
 
 .login-form a {
     text-decoration: none;
-    /* color: black; */
+    /* color: black;  */
 }
 
 .login-form input{
@@ -194,12 +194,12 @@ border: 1px solid white;
 }
 
 .all{
-   width: 18%;
+   width: 20%;
    border: 1px solid lightskyblue;
    border-radius: 10px;
    text-align: left;
    box-shadow: 10px black;
-   padding: 10px;
+   /* padding: 10px; */
    background-color: lightskyblue;
    color: white;
    box-shadow: 5px 10px;
@@ -217,10 +217,10 @@ border: 1px solid white;
     align-items: center;
     gap: 10px;
     padding: 10px 10%; 
-    /* margin-top: 2%; */
+    /* margin-top: 15%; */
      flex: 1 1 150px; /* stretch: */
      flex: 0 1 150px; 
-    font-size: 12px;
+    /* font-size: 12px; */
     border-radius: 10px;
  
     
@@ -381,10 +381,11 @@ border: 1px solid white;
 .regbutton {
     background-color: lightskyblue;
     border-radius: 3px;
-    /* border: 3px solid white; */
-    padding: 1px;
-    margin-left: 17px;
+    border: 2px solid white; 
+    padding: 3px;
+    margin-left: 1px;
     color: white;
+    font-size: 12px;
     /* margin-right: 0.5%; */
 }
 
@@ -521,6 +522,7 @@ border: 1px solid white;
 
 
 
+
 .dropdown {
   position: relative;
   /* display: inline-block; */
@@ -583,9 +585,10 @@ border: 1px solid white;
      }
 
      .products-landing img{
-        height: 10vh;
+        height: 20vh;
         object-fit: cover;
         width: 50%;
+        margin-left: 25%;
      }
 
      .myprod{
@@ -596,7 +599,7 @@ border: 1px solid white;
 
      .all{
          width: 250px;
-         /* margin-top: 10%; */
+         margin-top: 14%; 
      }
 
      .all-buttons{
@@ -622,7 +625,7 @@ border: 1px solid white;
     
     background-color: white;
     border-radius: 3px;
-    border: 2px solid white;
+    border: 3px solid white;
     padding: 1px;
     /* margin-right: 5px; */
     background-color: lightskyblue;
@@ -638,7 +641,7 @@ border: 1px solid white;
 
 .login-form a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 .login-form input{
@@ -680,7 +683,7 @@ border: 1px solid white;
 }
 
 .topnav a {
-    font-size: 10px;
+    font-size: 13px;
     margin-top: 10px;
 }
 .trigger-new{
@@ -707,5 +710,10 @@ border: 1px solid white;
 
 
 
+ }
+
+ .regbutton{
+     margin-left: -6px;
+     /* padding: 10px; */
  }
 }
