@@ -25,10 +25,30 @@ color: lightskyblue;
 
 .contact-above{
     text-align: center;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .whole-page{
     display: flex;
     flex-direction: column;
+}
+
+
+/* media resp */
+@media(max-width:1340px){
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        text-align: center;
+        margin-left: 8%;
+         margin-top: -5%; 
+        padding: 10%;
+    }
+    .contact-above h1{
+        margin-top: 7%;
+    }
+
+    
 }

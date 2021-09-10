@@ -53,14 +53,17 @@
   .under-div{
       display: flex;
       flex-direction: row;
-      margin-left: 20%;
-      margin-top: 4%;
+      margin-left: -15%;
+      margin-top: 12vh;
       /* margin-bottom: 1%; */
   }
 
+  
+
   .under-div input{
-      width: 50%;
+      width: 35%;
      margin-right: 5px; 
+     max-height: 50px;
   }
   
   .under-div button{
@@ -70,7 +73,7 @@
   .under-div h1{
     margin-top: 1%;  
     margin-right: 5%;
-    margin-left: 2%;
+    margin-left: 30%;
   }
   /* Style the links inside the navigation bar */
   .topnav > a {
@@ -81,11 +84,14 @@
     text-decoration: none;
     font-size: 17px;
   }
-  .mainh{
-      font-size: 20px;
+  /* .mainh{
+      /* font-size: 20px; */
       text-decoration: none;
       color: black;
-  }
+      /* margin-top: 6%; */
+      /* margin-left: 45%; */
+      /* text-align: center; */
+  } */
   
   /* Change the color of links on hover */
   .topnav a:hover {
@@ -123,7 +129,7 @@
 
 .login-form a {
     text-decoration: none;
-    color: black;
+    /* color: black; */
 }
 
 .login-form input{
@@ -197,7 +203,7 @@ border: 1px solid white;
    background-color: lightskyblue;
    color: white;
    box-shadow: 5px 10px;
-   margin-bottom: 3%;
+   margin-bottom: 6%;
    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
    display: flex;
    flex-direction: row;
@@ -276,7 +282,10 @@ border: 1px solid white;
       margin-top: 20%;
       width: 100%;
       border: 2px solid lightskyblue;
+      background-color: lightskyblue;
+      border-radius: 10px;
   }
+
 
   .adding-product input{
      width: 100%; 
@@ -365,6 +374,21 @@ border: 1px solid white;
 }
 
 .all-buttons button:hover{
+    background-color: lightskyblue;
+    color: white;
+}
+
+.regbutton {
+    background-color: lightskyblue;
+    border-radius: 3px;
+    /* border: 3px solid white; */
+    padding: 1px;
+    margin-left: 17px;
+    color: white;
+    /* margin-right: 0.5%; */
+}
+
+.regbutton:hover{
     background-color: lightskyblue;
     color: white;
 }
@@ -529,6 +553,158 @@ border: 1px solid white;
 .map{
     /* margin-bottom: 2.5%; */
     margin-top: -3.4vh;
-    margin-left: 18%;
+    /* margin-left: 18%; */
 }
 
+
+
+/* media resp */
+ @media(max-width:1340px) {
+     .products-landing{
+
+        display: flex;
+       
+        justify-content: center;
+        align-items: center;
+        /* gap: 10px; */
+        padding: 10px 10%; 
+        /* margin-top: 2%; */
+         flex: 1 1 150px; /* stretch: */
+         flex: 0 1 150px; 
+        font-size: 12px;
+        border-radius: 10px;
+        /* margin-left: ; */
+
+     }
+
+     .products{
+         margin-top: 10%;
+         gap:1px;
+     }
+
+     .products-landing img{
+        height: 10vh;
+        object-fit: cover;
+        width: 50%;
+     }
+
+     .myprod{
+         margin-top: 12%;
+         margin-bottom: 5%;
+         gap:1px;
+     }
+
+     .all{
+         width: 250px;
+         /* margin-top: 10%; */
+     }
+
+     .all-buttons{
+         display: none;
+     }
+
+     .login-form{
+         display: flex;
+         flex-direction: row; 
+        /* justify-content: flex-end; */
+        background-color:lightskyblue;
+        /* margin-top: 16px; */
+        /* margin-left: 100px; */
+        width: 100vw;
+       
+        }
+
+    .login-form label{
+    color: white;
+}
+
+.login-form button{
+    
+    background-color: white;
+    border-radius: 3px;
+    border: 2px solid white;
+    padding: 1px;
+    /* margin-right: 5px; */
+    background-color: lightskyblue;
+    color: white;
+
+    /* width: 7%; */
+}
+
+.login-form button:hover{
+    color: lightskyblue;
+    background-color: white;
+}
+
+.login-form a {
+    text-decoration: none;
+    color: black;
+}
+
+.login-form input{
+    border: 3px solid white;
+    color: grey;
+}
+
+.login-form label{
+    display: none;
+}
+
+.under-div{
+        display: none;
+}
+ 
+.index-nav{
+    display: none;
+}
+
+.topnav{
+
+    background-color:lightskyblue;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    /* justify-content: space-between; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* right: 0; */
+    /* overflow: visible; */
+    z-index: 20;
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 10%);
+    /* margin-bottom: 5%; */
+    height: 5vh;
+    width: 100vw;
+    font-size: 10px;
+
+}
+
+.topnav a {
+    font-size: 10px;
+}
+.trigger-new{
+    display: none;
+}
+
+.map{
+    /* margin-bottom: 2.5%; */
+    /* margin-top: -3.4vh; */
+    /* margin-left: 18%; */
+    width: 100%;
+}
+
+.register-container {
+    width: 100%;
+    justify-self: center;
+    border: 2px solid lightskyblue;
+    padding: 1%;
+    height: 52vh;
+    background-color: lightskyblue;
+    /* text-align: center; */
+    color: white;
+    border-radius: 10px;
+
+
+
+ }
+}

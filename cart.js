@@ -45,7 +45,7 @@ for(let item in cart){
         }else{
             let total = 0
             for (let i of cart){
-                total += i['price']
+                total += parseInt(i['price'])
             }
             window.localStorage.setItem('price', JSON.stringify(total))
         }

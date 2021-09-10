@@ -21,7 +21,7 @@
 }
 
 .page-row div{
-    width: 100%;
+    width: 30%;
 }
 
 .page-row i {
@@ -29,4 +29,50 @@
     font-size: 38px;
     color: white;
     margin-top: 10%;
+}
+
+.about-store{
+    margin-top: 6%;
+    margin-left: 45%;
+}
+
+/* responsive */
+
+/* media resp */
+@media(max-width:1340px){
+    .page-row{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        margin-top: 10%;
+        background-color: lightskyblue;
+        height: 45vh;
+        margin-bottom: 10%; 
+    }
+    .page-row div{
+        width: 20%;
+    }
+
+    .page-row h1{
+        text-align: center;
+        color: white;
+        margin-top: 5%;
+        font-size: 20px;
+    }
+
+    .page-row i {
+        /* margin-left: 45%; */
+        font-size: 20px;
+        color: white;
+        margin-top: 10%;
+    }
+
+    .about-top p{
+        display: none;
+    }
+
+    .about-store{
+        margin-top: 12%;
+        margin-left: 35%;
+    }
 }
