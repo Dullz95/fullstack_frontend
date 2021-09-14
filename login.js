@@ -75,8 +75,16 @@ function landingData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".products-landing"
-        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product[5]}' alt='product'></img><br><div class="bottom"><br><br>Product ID: ${product[0]}<br><br>Sold by: ${product[1]}<br><br>Name: ${product[2]}<br><br>Price: ${product[4]}<br><br>Description: ${product[3]}<br><br>Type: ${product[6]}</span><br><button class="trigger trigger-new" id='${product[0]}'>View product</button></div></div>`;
-        
+        ).innerHTML += `<div category=${product[6]} id="item-${product[0]}" class="all">
+        <span class="products-span"><img src='${product[5]}' alt='product'></img>
+        <div class="bottom">
+        <h2> ${product[2]}</h2>
+       <h3> Sold by: ${product[1]}</h3>
+        <p>
+        <b>Price: ${product[4]}</b></p>
+        <p>${product[3]}<p>
+        <p>Type: ${product[6]}
+        <button class="trigger trigger-new" id='${product[0]}'>View product</button></div></div></div>`;
       });
       document.querySelectorAll(".trigger-new").forEach(button => button.addEventListener("click", viewProductModal))
     });
@@ -105,7 +113,10 @@ function viewProductModal(e){
       
         document.querySelector(
           ".view-product"
-        ).innerHTML += `<div id="item-${product[0]}" class="all-modal"><br><br><span class="products-span"><img src='${product[0][5]}' alt='product'></img><br><div class="bottom"><br>ID: ${product[0][0]}<br>Sold by: ${product[0][1]}<br>Name: ${product[0][2]}<br>Price: ${product[0][4]}<br>Description: ${product[0][3]}'</span> </div></div>`;
+        ).innerHTML += `<div id="item-${product[0]}" class="all-modal">
+        <br><br>
+        <span class="products-span">
+        <img src='${product[0][5]}' alt='product'></img>`;
       document.querySelector('.modal').classList.toggle('show-modal');
     });
        ;
