@@ -287,16 +287,13 @@ border: 1px solid white;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    /* padding: 10px 10%;  */
-    margin-top: 2%;
-    flex: 1 1 150px; /* stretch: */
+    gap: 10px;
+    padding: 10px 10%; 
+    /* margin-top: 15%; */
+     flex: 1 1 150px; /* stretch: */
      flex: 0 1 150px; 
-    font-size: 14px;
+    /* font-size: 12px; */
     border-radius: 10px;
-    /* margin-left: 150px; */
-    margin-right: 5%;
-    margin-left: 5%;
   }
 
   .adding-product{
@@ -314,8 +311,11 @@ border: 1px solid white;
   }
 
 .myprod img{
-    height: 20vh;
+    height: 30vh;
     object-fit: cover;
+    width: 100%;
+    place-self: center;
+    grid-column: 1/2;
 }
 
 .all-modal{
@@ -524,6 +524,7 @@ border: 1px solid white;
     border-radius: 5px;
     background-color: lightskyblue;
     color: white; 
+    width: 100%;
 }
 
 .delete-item:hover{

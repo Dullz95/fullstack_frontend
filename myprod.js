@@ -14,7 +14,15 @@ function getData(url) {
       products["data"].forEach((product) => {
         document.querySelector(
           ".myprod"
-        ).innerHTML += `<div category=${product.type} id="item-${product[0]}" class="all"><br><span class="products-span"><img src='${product.price}' alt='product'></img><br><div class="bottom"><br>ID: ${product.prod_id}<br>Sold by: ${product.email}<br>Name: ${product.product_name}<br>Price: ${product.image}<br>Description: ${product.description}'</span><br><button class='update-item trigger' id='${product.prod_id}'>update</button><button class='delete-item' id='${product.prod_id}'>delete</button></div></div>`;
+        ).innerHTML += `<div category=${product.type} id="item-${product[0]}" class="all"><br><span class="products-span">
+        <img src='${product.price}' alt='product'></img>
+        <div class="bottom">
+        <h2> ${product.product_name}</h2>
+        <h3>Sold by: ${product.email}</h3>
+        <p>
+        <b>Price: ${product.image}</b></p>
+        <p> ${product.description}</p></span><br>
+        <button class='update-item trigger' id='${product.prod_id}'>update</button><button class='delete-item' id='${product.prod_id}'>delete</button></div></div>`;
         document.querySelectorAll('.delete-item').forEach(button => button.addEventListener('click', deleteProduct));
         document.querySelectorAll('.trigger').forEach(button => button.addEventListener('click', toggleModalUpdate))
       });
